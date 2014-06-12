@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative 'contact'
+require_relative 'rolodex'
 
 
 get '/' do
@@ -21,7 +22,8 @@ get '/contacts/new' do
 end
 
 get '/contacts/:id' do
-	#
+	@contact = @@rolodex.retriveContact(params[:id].to_i)
+	erb :show_contact
 end
 
 get '/contacts/:id/edit' do

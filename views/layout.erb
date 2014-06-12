@@ -4,15 +4,18 @@
 		<meta charset="UTF-8" />
 	</head>
 	<body>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="/style.css" />
 		<header>
-			<h1>Customer Relationship Management</h1><br>
-			<a href="/contacts">View Contacts</a>
-			<a href="/contacts/new">Add New Contact</a>
+			<h1>Customer Relationship Management</h1>
+			<ul class="navbar">
+				<li><a href="/">Main Menu</a></li>
+				<li><a href="/contacts">View Contacts</a></li>
+				<li><a href="/contacts/new">Add New Contact</a></li>
+			</ul>
 		</header>
 		<%= yield %>
 		<footer>
-			<p class="center">There is no copy right for this little assignment. I want more kBBQ.</p>
+			<p class="footnote">There is no copy right for this little assignment. I want more kBBQ.</p>
 		</footer>
 	</body>
 </html>
